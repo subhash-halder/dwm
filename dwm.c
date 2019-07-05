@@ -200,8 +200,6 @@ static void resizemouse(const Arg *arg);
 static void restack(Monitor *m);
 static void run(void);
 static void runAutostart(void);
-static void runLockScreen(const Arg *arg);
-static void runShutDown(const Arg *arg);
 static void scan(void);
 static int sendevent(Client *c, Atom proto);
 static void sendmon(Client *c, Monitor *m);
@@ -1444,16 +1442,6 @@ void
 runAutostart(void) {
 	system("dwm_autostart_blocking");
 	system("dwm_autostart &");
-}
-
-void
-runLockScreen(const Arg *arg) {
-	system("cd ~/.dotfiles/scripts; ./lockscreen");
-}
-
-void
-runShutDown(const Arg *arg) {
-	system("cd ~/.dotfiles/scripts; ./dmenu_prompt \"ShutDown\" \"sudo poweroff\" ");
 }
 
 void

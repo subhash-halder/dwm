@@ -7,15 +7,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Sans:size=10" };
 static const char dmenufont[]       = "Sans:size=10";
-static const char col_gray1[]       = "#282a36";
-static const char col_gray2[]       = "#282a36";
-static const char col_gray3[]       = "#f8f8f2";
-static const char col_gray4[]       = "#282a36";
-static const char col_cyan[]        = "#6272a4";
-static const char col_black[]       = "#282a36";
-static const char col_red[]         = "#ff5555";
-static const char col_yellow[]      = "#f1fa8c";
-static const char col_white[]       = "#f8f8f2";
+
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#3c3836";
+static const char col_gray3[]       = "#ebdbb2";
+static const char col_gray4[]       = "#282828";
+static const char col_cyan[]        = "#83a598";
+static const char col_black[]       = "#282828";
+static const char col_red[]         = "#cc241d";
+static const char col_yellow[]      = "#d79921";
+static const char col_white[]       = "#a89984";
 
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
@@ -84,9 +85,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = 1 } },
+	// { MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+	// { MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = 1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
